@@ -1,9 +1,9 @@
 trigger leadTrigger on Lead (before update, before insert, after update, after insert) {
 
+    // lead insert, update 시 Activity_Date__c 필드를 현재 시간으로 설정
     if(trigger.isBefore){
         if(trigger.isupdate || trigger.isInsert){
             for (Lead lead : Trigger.new) {
-                // Activity_Date__c 필드를 현재 날짜와 시간으로 설정합니다.
                 lead.Activity_Date__c = System.now();
             }
         }
