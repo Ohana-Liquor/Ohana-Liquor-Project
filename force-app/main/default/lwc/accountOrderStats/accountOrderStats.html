@@ -1,0 +1,45 @@
+<template>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-grid slds-text-align_center">
+                    <div class="slds-col slds-text-align_center" >
+                        <p >전체 주문 수</p>
+                        <h1 class="underline-on-hover" style="cursor: pointer;" onclick={navigateToListView} role="button">{totalOrders} 건</h1>
+                    </div>
+                    <div class="slds-col slds-text-align_center">
+                        <lightning-icon icon-name='standard:orders' alternative-text='orders' size='large' title='orders'></lightning-icon>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-grid slds-text-align_center">
+
+                    <div class="slds-col slds-text-align_center">
+                        <p>마지막 주문 일자</p>
+                        <h1>{lastActivateDate}</h1>
+                    </div>
+                    <div class="slds-col slds-text-align_center">
+                        <lightning-icon icon-name='standard:shift' alternative-text='shift' size='large' title='shift'></lightning-icon>
+                    </div>
+
+                </div>
+                    
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-grid slds-text-align_center">
+                    <div class="slds-col slds-text-align_center">
+                        <p>총 매출액</p>
+                        <h1>{totalRevenue} 원</h1>
+                    </div>
+                    <div class="slds-col slds-text-align_center">
+                        <lightning-icon icon-name='custom:custom17' alternative-text='custom17' size='large' title='custom17'></lightning-icon>
+                    </div>
+                </div>
+                
+            </lightning-layout-item>
+        
+        </lightning-layout>
+    </div>
+</template>

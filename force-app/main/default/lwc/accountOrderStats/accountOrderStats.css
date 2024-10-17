@@ -1,0 +1,15 @@
+p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    transition: text-decoration 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+
+.underline-on-hover:hover {
+    text-decoration: underline; /* 밑줄 효과 */
+}
